@@ -10,9 +10,10 @@ class Solution {
         dp[n-1] = true
 
         for i in (0..<n).reversed() {
-            let jumpIndex = i + nums[i]
-            for j in 0...jumpIndex {
-                if dp[j] {
+            for j in 0...nums[i] {
+                let jumpIndex = i + j
+                if jumpIndex > (n - 1) { break }
+                if dp[jumpIndex] {
                     dp[i] = true
                     break
                 }
