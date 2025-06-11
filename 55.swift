@@ -5,14 +5,18 @@
 class Solution {
     func canJump(_ nums: [Int]) -> Bool {
         let n = nums.count
+        if n == 1 { return true }
+
         // dp[i] represents can reach the last index from 'i'th index
         var dp = Array(repeating: false, count: n)
         dp[n-1] = true
 
-        for i in (0..<n).reversed() {
-            for j in 0...nums[i] {
+
+        for i in (0...(n - 2)).reversed() {
+            if nums[i] == 0 { continue }
+            for j in 1...nums[i] {
                 let jumpIndex = i + j
-                if jumpIndex > (n - 1) { break }
+                if jumpIndex >= n { break }
                 if dp[jumpIndex] {
                     dp[i] = true
                     break
