@@ -3,7 +3,29 @@
 // Medium 
 
 class Solution {
+
     func canJump(_ nums: [Int]) -> Bool {
+        usingOptimalApproach(nums)
+    }
+
+    // TC = O(n)
+    // Greedy Approach
+    func usingOptimalApproach(_ nums: [Int]) -> Bool {
+        let n = nums.count 
+        if n == 1 { return true }
+        var lastIndex = n - 1 
+
+        for i in (0...(n - 2)).reversed() {
+            if (i + nums[i] >= lastIndex) {
+                lastIndex = i
+            }
+        }
+
+        return lastIndex == 0
+    }
+
+    // TC = O(n^2)
+    func usingDP(_ nums: [Int]) -> Bool {
         let n = nums.count
         if n == 1 { return true }
 
