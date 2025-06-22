@@ -1,5 +1,6 @@
 // 560. Subarray Sum Equals K 
 // https://leetcode.com/problems/subarray-sum-equals-k/description/
+// Medium 
 
 class Solution {
     func subarraySum(_ nums: [Int], _ k: Int) -> Int {
