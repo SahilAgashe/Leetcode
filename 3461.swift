@@ -3,6 +3,7 @@
 // Easy 
 
 class Solution {
+    // Better Naive Solution 
     func hasSameDigits(_ s: String) -> Bool {
         let n = s.count
         var digits = s.map { Int(String($0)) ?? 0 }
@@ -24,6 +25,7 @@ class Solution {
         }
         return digits[0] == digits[1] ? true : false
     }
+
 }
 
 class NaiveSolution {
