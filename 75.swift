@@ -1,5 +1,5 @@
-//https://leetcode.com/problems/sort-colors/description/
-//Leetcode 75.Sort Colors
+// Leetcode 75.Sort Colors
+// https://leetcode.com/problems/sort-colors/description/
 // Medium (As per SAA, It is very once you understand!!! And You can Believe That!)
 
 class Solution {
