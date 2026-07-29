@@ -2,6 +2,29 @@
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 // Easy 
 
+
+class Solution {
+    func removeDuplicates(_ nums: inout [Int]) -> Int {
+        let n = nums.count
+        var j = 0 // next valid index to fill
+        for i in 0..<n {
+            if i == 0 { 
+                j = 1
+            } else { // i > 0
+            let curr = nums[i]
+            let prev = nums[i - 1]
+              if curr != prev {
+                nums[j] = curr
+                j += 1
+              }
+            }
+        }
+
+        return j 
+    }
+}
+
+
 class Solution {
     func removeDuplicates(_ nums: inout [Int]) -> Int {
         var prev = 0
