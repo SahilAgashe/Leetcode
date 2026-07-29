@@ -6,3 +6,5 @@ Leetcode 75
 2. Boyer-Moore Majority Voting Algorithm
 Leetcode 169
 
+## Arrays
+26 , to be continued...
