@@ -26,7 +26,9 @@ class Solution {
             }
         }
 
-        // As question mention, there is always majority element, we can just return without validating potential candidate, which is required process as per the Boyer–Moore Voting Algorithm.
+        // As question mention, there is always majority element, 
+        // we can just return without validating potential candidate, 
+        //which is required process as per the Boyer–Moore Voting Algorithm.
         return candidate
 
         // second pass O(N), to validate majority element
@@ -45,5 +47,10 @@ class Solution {
 }
 
 /*
-The Boyer–Moore Voting Algorithm efficiently finds the majority element in an array—an element that appears more than N/2 times—using two passes. In the first pass, it selects a potential candidate by increasing a counter when the same element is encountered and decreasing it when a different element appears, effectively canceling out non-majority elements. In the second pass, the algorithm verifies whether this candidate actually occurs more than N/2 times. This method runs in O(N) time and requires only O(1) extra space, making it both fast and memory-efficient.
+The Boyer–Moore Voting Algorithm efficiently finds the majority element in an array —
+an element that appears more than N/2 times—using two passes. 
+In the first pass, it selects a potential candidate by increasing a counter when the same element is encountered 
+and decreasing it when a different element appears, effectively canceling out non-majority elements. 
+In the second pass, the algorithm verifies whether this candidate actually occurs more than N/2 times. 
+This method runs in O(N) time and requires only O(1) extra space, making it both fast and memory-efficient.
 */
