@@ -6,5 +6,14 @@ Leetcode 75
 2. Boyer-Moore Majority Voting Algorithm
 Leetcode 169
 
-## Arrays
+## String
+2390 , to be continued...
+
+## Stack
+2390 , to be Continued...
+
+## Array
 26 , to be continued...
+
+## String , Stack 
+2390 , to be Continued...
