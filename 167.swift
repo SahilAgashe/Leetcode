@@ -3,6 +3,7 @@
 // Medium
 
 class Solution {
+    // TC = O(N) , SC = O(1)
     func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
         let n = numbers.count
         var low = 0
