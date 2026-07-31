@@ -22,6 +22,9 @@ Leetcode 169
 ## Binary Search Tree (BST)
 653, to be Continued...
 
+## Heap
+215, to be Continued...
+
 ## String And Stack 
 2390 , 1047, to be Continued...
 
