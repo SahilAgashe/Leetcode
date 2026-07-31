@@ -20,9 +20,10 @@ Leetcode 169
 ## Tree 
 
 ## Binary Search Tree (BST)
+653, to be Continued...
 
 ## String And Stack 
 2390 , 1047, to be Continued...
 
 ## Array Patterns
-1] Two Sum Pattern: 1, 167 , 653
+1] Two Sum Pattern: 1, 167 , 653(BST)
