@@ -12,8 +12,14 @@ Leetcode 169
 ## Stack
 2390 , 1047, to be Continued...
 
+## Monotonic Stack 
+
 ## Array
 26, 1, 167, to be continued...
+
+## Tree 
+
+## Binary Search Tree (BST)
 
 ## String And Stack 
 2390 , 1047, to be Continued...
