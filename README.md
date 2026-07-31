@@ -15,5 +15,5 @@ Leetcode 169
 ## Array
 26, 1, 167, to be continued...
 
-## String, Stack 
+## String And Stack 
 2390 , 1047, to be Continued...
