@@ -23,12 +23,15 @@ Leetcode 169
 653, to be Continued...
 
 ## Min Heap
-215, 347, to be Continued...
+215, 347, 692, to be Continued...
 
 ## Max Heap
 
 ## String And Stack 
 2390 , 1047, to be Continued...
+
+## String And Heap 
+692, to be Continued...
 
 ## Array Patterns
 1] Two Sum Pattern: 1, 167 , 653(BST)
