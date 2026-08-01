@@ -14,6 +14,7 @@ class Solution {
         }
     }
 
+    // TC = O(nlogk) , SC = O(n)
     func topKFrequent(_ nums: [Int], _ k: Int) -> [Int] {
         var frequencyMap = [Int: Int]() 
         var minHeap = Heap<ElementCount>()
