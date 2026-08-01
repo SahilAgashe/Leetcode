@@ -2,10 +2,10 @@
 // https://leetcode.com/problems/kth-largest-element-in-an-array/description/
 // Medium (Easy As Per SAA)
 
-
 import Collections // Apple's Swift Collections package 
 
 class Solution {
+    // TC = O(nlogk) , SC = O(k)
     func findKthLargest(_ nums: [Int], _ k: Int) -> Int {
         var minHeap = Heap<Int>() // will use heap of size k 
 
@@ -35,3 +35,6 @@ for n = 10 elements
 
 kth largest => (n - k + 1)th smallest 
 */
+
+// Second approach to solve this 
+// Quick Selection Algorithm
