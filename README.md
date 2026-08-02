@@ -37,4 +37,4 @@ Leetcode 169
 
 ## Array Patterns
 1. Two Sum Pattern: 1, 167 , 653(BST)
-2. Quicksort Patter: 2161
+2. Quicksort Pattern: 2161
