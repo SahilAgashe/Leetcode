@@ -16,7 +16,7 @@ Leetcode 169
 496, 739, 503, to be continued...
 
 ## Array
-26, 1, 167, to be continued...
+26, 1, 167, 2161, to be continued...
 
 ## Tree 
 
@@ -37,3 +37,4 @@ Leetcode 169
 
 ## Array Patterns
 1] Two Sum Pattern: 1, 167 , 653(BST)
+2] Quicksort Patter: 2161
