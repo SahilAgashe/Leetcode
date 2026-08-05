@@ -27,6 +27,7 @@ class Solution {
         return maxArea
     }
 
+    // 84. Largest Rectangle in Histogram
     // Intuition : next smaller element & previous smaller element
     // TC = O(n), SC = O(n)
     private func largestRectangleArea(_ heights: [Int]) -> Int {
