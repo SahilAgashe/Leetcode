@@ -15,7 +15,9 @@ Leetcode 169
 ## Monotonic Stack 
 496, 739, 503, 84, 85, 901, to be continued...
 
-## Monotonic Queue 
+## Monotonic Queue
+
+## Monotonic Deque 
 239, to be continued...
 
 ## Array
