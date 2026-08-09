@@ -21,7 +21,10 @@ Leetcode 169
 239, to be continued...
 
 ## Array
-26, 1, 167, 2161, 277, 283, 645, to be continued...
+26, 1, 167, 2161, 277, 283, 645, 268, to be continued...
+
+## Bit Manipulation 
+XOR: 268, to be continued...
 
 ## Matrix 
 277, 85, to be continued...
@@ -46,4 +49,4 @@ Leetcode 169
 ## Array Patterns
 1. Two Sum Pattern: 1, 167 , 653(BST)
 2. Quicksort Pattern: 2161
-3. 1 to N numbers: 645
+3. 0 to N / 1 to N numbers: 645, 268
