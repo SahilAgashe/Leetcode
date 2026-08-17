@@ -26,6 +26,9 @@ Leetcode 169
 ## Bit Manipulation 
 XOR: 268, to be continued...
 
+## Basic Maths
+7, to be continued...
+
 ## Matrix 
 277, 85, to be continued...
 
