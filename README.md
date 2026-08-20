@@ -49,7 +49,11 @@ XOR: 268, to be continued...
 ## String And Heap 
 692, to be Continued...
 
+## Sorting 
+561, to be continued...
+
 ## Array Patterns
 1. Two Sum Pattern: 1, 167 , 653(BST)
 2. Quicksort Pattern: 2161
 3. 0 to N / 1 to N numbers: 645, 268
+
