@@ -58,3 +58,15 @@ Core Rule of Thumb
 Need Maximum in a range? => Decreasing Monotonic (Front is Max)
 Need Minimum in a range? => Increasing Queue (Front is Min)
 */
+
+/*
+Complexity Analysis
+* Time Complexity: O(N)
+    * You loop through the array of length N once.
+    * Every element (index) is appended to the deque exactly once and popped at most once.
+    * Although there is a while loop inside the main loop, 
+      across the entire execution of the function, deque.popLast() runs at most N times. 
+    * This gives an amortized O(1) time per element, yielding an overall time complexity of O(N).
+* Space Complexity: O(k)
+    * The deque stores at most k elements at any given time (excluding the ans array needed for the output).
+*/
