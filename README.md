@@ -54,7 +54,7 @@ XOR: 268, to be continued...
 561, to be continued...
 
 ## Dynamic Programming 
-1. Fibonacci Series: 70 , etc.
+1. Fibonacci Series: 70 , 509 etc.
 2. 
 
 ## Array Patterns
