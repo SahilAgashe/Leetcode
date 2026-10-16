@@ -20,7 +20,7 @@ f(n) denotes the Fibonacci number to be calculated
 */
 
 
-// TC = O(1), if we consider storage array update initially only time, k is size of the array
+// TC = O(1), if we consider storage array update initially only one time TC = O(k), k is size of the array
 class Solution {
     private var storage = [Int](repeating: 0, count: 31)
 
