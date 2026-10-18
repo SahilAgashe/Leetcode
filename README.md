@@ -55,7 +55,7 @@ XOR: 268, to be continued...
 
 ## Dynamic Programming 
 (Recursion + Top Down DP + Bottom Up DP + 2D DP TO 1D DP)
-1. 1D DP , Fibonacci Series  : 70 , 509, 198 etc.
+1. 1D DP , Fibonacci Series  : 70 , 509, 198, 213 etc.
 2. 2D DP , (2D DP To 1D DP): 72, 1143, 516, 583, etc.
 
 ## Array Patterns
