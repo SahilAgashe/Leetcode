@@ -17,6 +17,7 @@
  *     }
  * }
  */
+
 class Solution {
     // Using Recursion 
     // DFS , PreOrder Traversal 
@@ -24,11 +25,6 @@ class Solution {
         // Base Case 1: root is nil 
         guard let root else {
             return 0
-        }
-
-        // Base Case 2: Only Root node OR Leaf node
-        if root.left == nil && root.right == nil {
-            return 1
         }
 
         // Recursive Cases
