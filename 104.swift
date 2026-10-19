@@ -21,6 +21,12 @@
 class Solution {
     // Using Recursion 
     // DFS , PreOrder Traversal 
+    // TC = O(N) , N = no. of nodes in tree
+    // SC = O(H) , H = Height of the tree
+    // The recursion call stack uses space proportional to the height of the tree H.
+    // In the worst case (skewed tree), H = N, yielding O(N) space.
+    // A skewed binary tree is a binary tree where all internal nodes have only one child, 
+    // In the best/balanced case, H = log N, yielding O(logN) space.
     func maxDepth(_ root: TreeNode?) -> Int {
         // Base Case 1: root is nil 
         guard let root else {
