@@ -65,5 +65,5 @@ Recursion , Top Down DP (Recursion + Memoization), Bottom Up DP
 2. Quicksort Pattern: 2161
 3. 0 to N / 1 to N numbers: 645, 268
 4. Merge two sorted arrays : 4
-5. Prefix Sum / Running Sum: 560, etc.
+5. Prefix Sum / Running Sum: 303, 560, etc.
 
