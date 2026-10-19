@@ -5,6 +5,8 @@
 Leetcode 75 
 2. Boyer-Moore Majority Voting Algorithm
 Leetcode 169
+3. Binary Search Partition
+   Leetcode 4
 
 ## String
 2390, 1047, to be continued...
