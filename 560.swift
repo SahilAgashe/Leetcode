@@ -1,35 +1,27 @@
-// 560. Subarray Sum Equals K 
+// 560. Subarray Sum Equals K
 // https://leetcode.com/problems/subarray-sum-equals-k/description/
-// Medium 
+// Medium , But it is very easy!
 
+// TC = O(n) , SC = O(n)
 class Solution {
     func subarraySum(_ nums: [Int], _ k: Int) -> Int {
-        let n = nums.count
-        var prefixSumFreqMap = Dictionary<Int,Int>() // prefixSum <---> Frequency
-        var ans = 0 // total number of subarrays whose sum equals to k
+        let n = nums.count 
+        // prefixSumMap stores: [PrefixSum: Frequency]
+        var prefixSumMap = Dictionary<Int, Int>() 
+        var ans = 0
 
-        // Getting Prefix Sum
-        var prefixSum = Array<Int>(repeating:0, count: n)
-        prefixSum[0] = nums[0]
-        for i in 1..<n {
-            prefixSum[i] = prefixSum[i-1] + nums[i]
-        }
-
+        var prefixSum = 0
         for i in 0..<n {
-            let currPrefixSum = prefixSum[i]
-            if currPrefixSum == k { ans += 1}
-            let val = currPrefixSum - k 
-            if let freq = prefixSumFreqMap[val] {
-                ans += freq
-            } 
-
-            if let val = prefixSumFreqMap[currPrefixSum] {
-                 prefixSumFreqMap[currPrefixSum] = val + 1
-            } else {
-                prefixSumFreqMap[currPrefixSum] = 1 
+            prefixSum += nums[i]
+            if prefixSum == k {
+                ans += 1
             }
-        }
 
+            if let count = prefixSumMap[prefixSum - k] {
+                ans += count
+            }
+             prefixSumMap[prefixSum, default: 0] += 1
+        }
         return ans
     }
 }
