@@ -16,6 +16,13 @@
  * }
  */
 
+/*
+Complexity Analysis
+Time Complexity: O(N), In the worst case, every node in the tree is visited once.
+Space Complexity: O(H), where H is the height of the tree.
+O(log N) on a balanced binary tree. 
+O(N) on a completely skewed tree due to recursion stack frames.
+*/
 class Solution1 {
     func lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
         if root == nil || p === root || q === root {
