@@ -96,3 +96,7 @@ OrderedDictionary shines in real-world software engineering scenarios where inse
 * UI Lists & Forms: Maintaining stable row ordering in a form or list view while still allowing $O(1)$ fast key lookups by identifier.
 * Reordering Data: Swapping or reordering keys without rebuilding the dictionary from scratch.
 */
+
+// Here we used removeFirst() , as we are sure it will not crash
+// but always try to use popFirst()
+// Mention that popFirst() returns an optional and safely handles popping without crashing if the collection were empty (defensive programming).
