@@ -17,6 +17,9 @@ Leetcode 169
 ## Monotonic Stack 
 496, 739, 503, 84, 85, 901, to be continued...
 
+## Queue 
+102, etc
+
 ## Monotonic Queue
 only monotonic duque problems there as per findings.
 
@@ -37,7 +40,7 @@ XOR: 268, to be continued...
 
 ## Tree 
 DFS: 104 , etc.
-BFS
+BFS: 102
 
 ## Binary Search Tree (BST)
 653, 98, 700, to be Continued...
