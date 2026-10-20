@@ -40,7 +40,7 @@ XOR: 268, to be continued...
 
 ## Tree 
 1. DFS: 104, 236, etc.
-2. BFS: 987, 102, etc.
+2. BFS: 987, 102, 103, etc.
 
 ## Binary Search Tree (BST)
 653, 98, 700, to be Continued...
