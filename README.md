@@ -51,6 +51,10 @@ XOR: 268, to be continued...
 ## Max Heap
 973, 1046, to be Continued...
 
+## Graph 
+1. DFS: 200, etc.
+2. BFS: 200, etc.
+
 ## String And Stack 
 2390 , 1047, to be Continued...
 
@@ -62,13 +66,13 @@ XOR: 268, to be continued...
 
 ## Dynamic Programming 
 Recursion , Top Down DP (Recursion + Memoization), Bottom Up DP
-1. 1D DP , Fibonacci Series  : 70 , 509, 198, 213, 322 etc.
+1. 1D DP , Fibonacci Series: 70 , 509, 198, 213, 322 etc.
 2. String DP , Sequence DP , 2D DP , 2D DP To 1D DP: 72, 1143, 516, 583, etc.
 
 ## Array Patterns
 1. Two Sum Pattern: 1, 167 , 653(BST)
 2. Quicksort Pattern: 2161
 3. 0 to N / 1 to N numbers: 645, 268
-4. Merge two sorted arrays : 4
+4. Merge two sorted arrays: 4
 5. Prefix Sum / Running Sum: 303, 560, etc.
 
