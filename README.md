@@ -7,6 +7,7 @@ Leetcode 75
 Leetcode 169
 3. Binary Search Partition
    Leetcode 4
+4. Kadane's Algorithm: Leetcode 53
 
 ## String
 2390, 1047, to be continued...
