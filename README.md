@@ -8,6 +8,7 @@ Leetcode 169
 3. Binary Search Partition
    Leetcode 4
 4. Kadane's Algorithm: Leetcode 53
+5. Manacher's Algorithm: Leetcode 5 (Unsolved yet!)
 
 ## String
 2390, 1047, to be continued...
@@ -76,6 +77,7 @@ Recursion , Top Down DP (Recursion + Memoization), Bottom Up DP
 3. 0 to N / 1 to N numbers: 645, 268
 4. Merge two sorted arrays: 4
 5. Prefix Sum / Running Sum: 303, 560, etc.
+6. Two Pointers Approach: 5
 
 ## Design System & DSA
 1. BST Iterator: 173 , 653
