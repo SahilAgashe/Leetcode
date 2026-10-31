@@ -18,7 +18,7 @@
  * }
  */
 
-  // Could you implement next() and hasNext() to run in average O(1) time and use O(h) memory, where h is the height of the tree?
+// Could you implement next() and hasNext() to run in average O(1) time and use O(h) memory, where h is the height of the tree?
 
 // Iterator iterates from lower values to higher values
 class BSTIterator1 {
@@ -51,12 +51,26 @@ class BSTIterator1 {
     }
 }
 
-/*
+/* 
+Time Complexity =>
 hasNext() is O(1): 
 It simply checks whether the stack array is empty (!stack.isEmpty), which is a constant-time operation.
 next() is Amortized O(1): A single call to next() may trigger pushAll and visit multiple nodes along a branch, taking O(H) time in the worst case. However, across a full traversal of the tree, every one of the N nodes is pushed to stack exactly once and popped from stack exactly once. Therefore, N calls to next() perform O(N) work total, averaging out to O(1) time per operation.
 */
 
+/*
+For your MyBSTIterator or BSTIterator, the space complexity is O(H), where H is the height of the Binary Search Tree.
+
+Detailed Breakdown
+* Best/Average Case (Balanced Tree): O(log N)If the tree is balanced (like an AVL tree or Red-Black tree), the maximum height of the tree is logN. The internal stack array will never hold more than logN nodes at any point.
+* Worst Case (Skewed Tree): O(N)If the tree degrades into a straight line (e.g., each node only has a right child or only a left child), the height H equals N. In this worst-case scenario, the stack will hold up to N nodes.
+Why is it O(H) space instead of O(N)?
+Your iterator only stores nodes along the current path from the root to a leaf.
+
+1. In the constructor, pushAll(root) traverses straight down along the leftmost (or rightmost) branch and pushes only those nodes onto the stack.
+2. During iteration with next(), nodes are popped off, and pushAll only traverses down a new branch when a right (or left) subtree exists.
+3. At no point are all N nodes kept in the stack simultaneously. The maximum depth of stack at any single moment is capped by the longest path from the root to a leaf—which is precisely H.
+*/
 
 
 // Iterator iterates from lower values to higher values
