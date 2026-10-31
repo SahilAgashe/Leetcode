@@ -44,7 +44,7 @@ XOR: 268, to be continued...
 2. BFS / Level Order Traversal: 987, 102, 103, etc.
 
 ## Binary Search Tree (BST)
-653, 98, 700, 235, 173, to be Continued...
+653, 98, 700, 235, 173, 653 to be Continued...
 
 ## Min Heap
 215, 347, 692, 703, 973, 862, to be Continued...
@@ -78,5 +78,5 @@ Recursion , Top Down DP (Recursion + Memoization), Bottom Up DP
 5. Prefix Sum / Running Sum: 303, 560, etc.
 
 ## Design System & DSA
-1. BST Iterator: 173
+1. BST Iterator: 173 , 653
 
