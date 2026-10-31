@@ -77,3 +77,6 @@ Recursion , Top Down DP (Recursion + Memoization), Bottom Up DP
 4. Merge two sorted arrays: 4
 5. Prefix Sum / Running Sum: 303, 560, etc.
 
+## Design System & DSA
+1. BST Iterator: 173
+
