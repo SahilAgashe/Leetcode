@@ -2,6 +2,7 @@
 // https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/
 // Easy
 
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -17,73 +18,185 @@
  *     }
  * }
  */
+
+ // Naive Solution: BST traversal & getting sorted array, 
+ // then problem reduced to solving two sum for an sorted array
+ // TC => O(N) => O(N) for traversal + O(N) for two pointer scan
+ // SC => O(N) => O(N) for array + O(H) stack frame memory for the recursion , H = height of tree
 class Solution1 {
-    // TC = O(N), SC = O(N)
-    var elementSet = Set<Int>()
     func findTarget(_ root: TreeNode?, _ k: Int) -> Bool {
-        if root == nil { return false }
-        let currValue = root!.val
-        if elementSet.contains(k - currValue) { return true }  
-        elementSet.insert(currValue)
-        let checkLeftTree = findTarget(root?.left, k)
-        if checkLeftTree { return true }
-        return findTarget(root?.right, k)
+        var nums = [Int]()
+        inorderTraversal(root, &nums)
+        return twoSumOnSortedArray(nums, k)
+    }
+
+    // O(N)
+    private func inorderTraversal(_ root: TreeNode?, _ nums: inout [Int]) {
+        guard let root else { return }
+        inorderTraversal(root.left, &nums)
+        nums.append(root.val)
+        inorderTraversal(root.right, &nums)
+    }
+
+    // TC = O(N)
+    private func twoSumOnSortedArray(_ nums: [Int], _ k: Int) -> Bool {
+        var low = 0 
+        var high = nums.count - 1
+
+        while low < high {
+            let sum = nums[low] + nums[high]
+            if sum == k {
+                return true
+            } else if sum < k {
+                low += 1
+            } else {
+                high -= 1
+            }
+        }
+
+        return false
     }
 }
 
 
-class Solution {
-
-    // Two-Pointer BST Iterator (O(h) Space Optimal)
-    // TC = O(N), SC = O(h), h = height of the tree
-    // O(h) — Memory for two stacks (leftNodes and rightNodes arrays) proportional to tree height h.
+ // Improved Solve: Using Set (Hash Table)
+ // TC = O(N) for traversal, N = no. of nodes 
+ // SC = O(N) => O(N) for set + O(H) for recursion stack , H = height of the tree
+class Solution2 {
     func findTarget(_ root: TreeNode?, _ k: Int) -> Bool {
-        var leftNodes = [TreeNode]() // letfmost path
-        var rightNodes = [TreeNode]() // rightmost path
-        var ans: Bool = false
+        var numSet = Set<Int>()
+        return inorderTraversal(root, k, &numSet)
+    }
 
-        // initialize leftmost path
-        var currLeft: TreeNode? = root
-        while let node = currLeft {
-            leftNodes.append(node)
-            currLeft = node.left
+    // TC = O(N)
+    private func inorderTraversal(_ root: TreeNode?, _ k: Int, _ numSet: inout Set<Int>) -> Bool {
+        guard let root else { return false }
+        let validateLeft = inorderTraversal(root.left, k, &numSet)
+        if validateLeft { return true }
+        if numSet.contains(k - root.val) {
+            return true
         }
+        numSet.insert(root.val)
+        return inorderTraversal(root.right, k, &numSet)
+    }
 
-        // initialize leftmost path
-        var currRight = root
-        while let node = currRight {
-            rightNodes.append(node)
-            currRight = node.right
-        }
+}
 
-        while let left = leftNodes.last,
-              let right = rightNodes.last,
-              left !== right { // left and right are reference types so !== operator
-                let sum = left.val + right.val 
+ // Space Optimized Solution 
+ // TC = O(N) for traversal, N = no. of nodes 
+ // SC = O(H), H = height of the tree
+class Solution3 {
+    func findTarget(_ root: TreeNode?, _ k: Int) -> Bool {
+        let leftIterator = BSTIterator(root) // Ascending 
+        let rightIterator = BSTIterator(root, reverse: true) // Descending
+
+        var left = leftIterator.next()
+        var right = rightIterator.next() 
+        while let low = left , let high = right, low < high {
+                let sum = low + high
                 if sum == k {
-                    ans = true 
-                    break
+                    return true
                 } else if sum < k {
-                    // Move forward iterator (next smallest element)
-                    // 1. Pop the current smallest element, and grab its right child
-                    var curr = leftNodes.popLast()?.right
-                    // 2. Traverse as far left as possible from that right child
-                    while let node = curr {
-                        leftNodes.append(node)
-                        curr = node.left
-                    }
-                } else { // else if sum > k
-                    // Move reverse iterator (next largest element)
-                    // 1. Pop the current largest element, and grab its left child
-                    var curr = rightNodes.popLast()?.left
-                    // 2. Traverse as far right as possible from that left child
-                    while let node = curr {
-                        rightNodes.append(node)
-                        curr = node.right
-                    }
+                    left = leftIterator.next()
+                } else {
+                    right = rightIterator.next()
                 }
          }
+         return false
+    }
 
-         return ans
+    private class BSTIterator {
+        // Private Properties
+        private var stack = Array<TreeNode>() 
+        private var reverse: Bool
+
+        // Public Init
+        init(_ root: TreeNode?, reverse: Bool = false) {
+            self.reverse = reverse
+            pushAll(root)
+        }
+
+        // Public Helpers
+        func next() -> Int? {
+            let node = stack.popLast() 
+            pushAll(reverse ? node?.left : node?.right)
+            return node?.val
+        } 
+
+        func hasNext() -> Bool {
+            return !stack.isEmpty
+        }
+
+        // MARK: - Private Helpers
+        private func pushAll(_ root: TreeNode?) {
+            var root = root
+            while let node = root {
+                stack.append(node)
+                root = reverse ? node.right : node.left
+            }
+        }
     }
 }
+
+
+
+ // Space Optimized Solution 
+ // TC = O(N) for traversal, N = no. of nodes 
+ // SC = O(H), H = height of the tree
+ // Code Quality Improvement 
+ // We can remove optional, will never call edge cases! to handle nil
+class Solution {
+    func findTarget(_ root: TreeNode?, _ k: Int) -> Bool {
+        let leftIterator = BSTIterator(root) // Ascending 
+        let rightIterator = BSTIterator(root, reverse: true) // Descending
+
+        var left = leftIterator.next()
+        var right = rightIterator.next() 
+        while left < right {
+                let sum = left + right
+                if sum == k {
+                    return true
+                } else if sum < k {
+                    left = leftIterator.next()
+                } else {
+                    right = rightIterator.next()
+                }
+         }
+         return false
+    }
+
+    private class BSTIterator {
+        // Private Properties
+        private var stack = Array<TreeNode>() 
+        private var reverse: Bool
+
+        // Public Init
+        init(_ root: TreeNode?, reverse: Bool = false) {
+            self.reverse = reverse
+            pushAll(root)
+        }
+
+        // Public Helpers
+        func next() -> Int {
+            // Using Remove Last here, as we are 100% sure
+            // But try to alwasy use popLast()!
+            let node = stack.removeLast() 
+            pushAll(reverse ? node.left : node.right)
+            return node.val
+        } 
+
+        func hasNext() -> Bool {
+            return !stack.isEmpty
+        }
+
+        // MARK: - Private Helpers
+        private func pushAll(_ root: TreeNode?) {
+            var root = root
+            while let node = root {
+                stack.append(node)
+                root = reverse ? node.right : node.left
+            }
+        }
+    }
+}
+
