@@ -267,7 +267,10 @@ Like Stack!(LIFO)
 
 
 /*
-For Adjacency List Representation of Graph Time Complexity of DFS / BFS
+Time Complexity of DFS / BFS based on Graph Representation
+
+For Adjacency List Representation of Graph
+Time Complexity of DFS / BFS
 => O(V+E) 
 Processing each node once O(V) + traversing all edge lists O(E)
 so O(V + E)
