@@ -54,8 +54,8 @@ XOR: 268, to be continued...
 973, 1046, to be Continued...
 
 ## Graph 
-1. DFS: 200, etc.
-2. BFS: 200, etc.
+1. DFS: 200, 785, etc.
+2. BFS: 200, 785, etc.
 
 ## String And Stack 
 2390 , 1047, to be Continued...
