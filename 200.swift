@@ -247,3 +247,19 @@ Here are the key differences between Depth-First Search (DFS) and Breadth-First 
     * DFS: Best for connectivity testing, cycle detection, topological sorting, finding strongly connected components, and solving puzzles with exhaustive constraint satisfaction (e.g., Sudoku, mazes).
     * BFS: Best for finding the shortest path or minimum steps in unweighted graphs, finding nodes within a specific radius $K$, and level-order processing.
 */
+
+
+/*
+Two main terms in DFS & BFS (By Abdul Bari Sir Lecture)
+1. Visiting a vertex
+2. Exploration of vertex
+
+BFS
+We explore a vertex completely, then we go to next vertex for exploration
+Like Queue(FIFO)
+
+DFS 
+Once we visited a vertex, once we start exploring it, we suspend its exploration ,
+then go for next vertex for exploration, and recursively continue this process. 
+Like Stack!(LIFO)
+*/
