@@ -263,3 +263,18 @@ Once we visited a vertex, once we start exploring it, we suspend its exploration
 then go for next vertex for exploration, and recursively continue this process. 
 Like Stack!(LIFO)
 */
+
+
+
+/*
+For Adjacency List Representation of Graph Time Complexity of DFS / BFS
+=> O(V+E) 
+Processing each node once O(V) + traversing all edge lists O(E)
+so O(V + E)
+
+For Adjacency Matrix Representation of Graph
+Time Complexity of DFS / BFS
+=> O(V*V)
+Checking every column O(V) in a row  for each of the V nodes
+so O(V*V)
+*/
