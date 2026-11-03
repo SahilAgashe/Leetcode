@@ -11,7 +11,7 @@ Leetcode 169
 5. Manacher's Algorithm: Leetcode 5 (Unsolved yet!)
 
 ## String
-2390, 1047, to be continued...
+2390, 1047, 3, to be continued...
 
 ## Stack
 2390, 1047, 85, to be Continued...
@@ -81,6 +81,7 @@ Recursion , Top Down DP (Recursion + Memoization), Bottom Up DP
 4. Merge two sorted arrays: 4
 5. Prefix Sum / Running Sum: 303, 560, etc.
 6. Two Pointers Approach: 5
+7. Sliding Window: 3
 
 ## Design System & DSA
 1. BST Iterator: 173 , 653
