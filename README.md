@@ -9,6 +9,7 @@ Leetcode 169
    Leetcode 4
 4. Kadane's Algorithm: Leetcode 53
 5. Manacher's Algorithm: Leetcode 5 (Unsolved yet!)
+6. Binary Search : 33 , etc.
 
 ## String
 2390, 1047, 3, 242, to be continued...
