@@ -3,18 +3,57 @@
 // Easy 
 
 
+class Solution1 {
+    func moveZeroes(_ nums: inout [Int]) {
+        var indexToUpdate = 0
+        for i in 0..<nums.count {
+            if nums[i] == 0 {
+                continue
+            } else {
+                nums.swapAt(i , indexToUpdate)
+                indexToUpdate += 1
+            }
+        }
+    }
+}
+
+class Solution2 {
+    func moveZeroes(_ nums: inout [Int]) {
+        var indexToUpdate = 0
+        for i in 0..<nums.count {
+            if nums[i] != 0 {
+                nums.swapAt(i , indexToUpdate)
+                indexToUpdate += 1
+            }
+        }
+    }
+}
+
+class Solution3 {
+    func moveZeroes(_ nums: inout [Int]) {
+        var indexToUpdate = 0
+        for i in 0..<nums.count {
+            if nums[i] != 0 {
+                if i != indexToUpdate {
+                    nums.swapAt(i , indexToUpdate)
+                }
+                 indexToUpdate += 1
+            }
+        }
+    }
+}
+
 class Solution {
     func moveZeroes(_ nums: inout [Int]) {
         var writeIndex = 0
-        for (readIndex, num) in nums.enumerated() {
-            if num != 0 {
-                if writeIndex != readIndex {
-                    nums.swapAt(writeIndex, readIndex)
+        for (readIndex, value) in nums.enumerated() {
+            if value != 0 {
+                if readIndex != writeIndex {
+                    nums.swapAt(readIndex, writeIndex)
                 }
-                writeIndex += 1
-            } 
+                 writeIndex += 1
+            }
         }
-        return 
     }
 }
 
