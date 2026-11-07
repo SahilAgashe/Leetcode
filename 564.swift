@@ -3,6 +3,8 @@
 // Hard
 
 class Solution {
+    // Time Complexity: O(L), where L is the number of digits in n. String operations and conversions run in time proportional to the length of the string (at most 18 digits in LeetCode bounds).
+    // Space Complexity: O(L) to store the candidate strings.
     func nearestPalindromic(_ n: String) -> String {
         let l = n.count // length
         guard let num = Int64(n) else { return "" } 
